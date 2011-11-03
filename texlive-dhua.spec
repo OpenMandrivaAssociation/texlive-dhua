@@ -1,3 +1,9 @@
+# revision 24035
+# category Package
+# catalog-ctan /macros/latex/contrib/dhua
+# catalog-date 2011-09-20 00:29:10 +0200
+# catalog-license lppl1.3
+# catalog-version 0.11
 Name:		texlive-dhua
 Version:	0.11
 Release:	1
@@ -56,6 +62,7 @@ eingestreut.
 %doc %{_texmfdistdir}/source/latex/dhua/README.tex
 %doc %{_texmfdistdir}/source/latex/dhua/dhua.tex
 %doc %{_texmfdistdir}/source/latex/dhua/srcfiles.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -66,3 +73,5 @@ eingestreut.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
