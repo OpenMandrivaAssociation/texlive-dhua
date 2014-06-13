@@ -6,7 +6,7 @@
 # catalog-version 0.11
 Name:		texlive-dhua
 Version:	0.11
-Release:	6
+Release:	7
 Summary:	German abbreviations using thin space
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/dhua
