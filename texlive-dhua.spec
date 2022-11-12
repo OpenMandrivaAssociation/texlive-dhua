@@ -1,19 +1,13 @@
-# revision 24035
-# category Package
-# catalog-ctan /macros/latex/contrib/dhua
-# catalog-date 2011-09-20 00:29:10 +0200
-# catalog-license lppl1.3
-# catalog-version 0.11
 Name:		texlive-dhua
-Version:	0.11
-Release:	12
+Version:	24035
+Release:	1
 Summary:	German abbreviations using thin space
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/dhua
 License:	LPPL1.3
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dhua.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dhua.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dhua.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dhua.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dhua.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dhua.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -33,12 +27,12 @@ englische Paketdokumentation sind deutsche Erlauterungen
 eingestreut.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -55,24 +49,11 @@ eingestreut.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.11-2
-+ Revision: 750890
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 0.11-1
-+ Revision: 718224
-- texlive-dhua
-- texlive-dhua
-- texlive-dhua
-- texlive-dhua
-
