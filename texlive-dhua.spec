@@ -1,6 +1,6 @@
 Name:		texlive-dhua
 Version:	24035
-Release:	1
+Release:	2
 Summary:	German abbreviations using thin space
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/dhua
