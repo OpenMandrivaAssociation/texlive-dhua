@@ -3,7 +3,7 @@ Version:	24035
 Release:	2
 Summary:	German abbreviations using thin space
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/dhua
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/dhua
 License:	LPPL1.3
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dhua.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dhua.doc.r%{version}.tar.xz
